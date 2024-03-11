@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 6 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">14 methods, 3 failed,   11 passed</span>
+                    <span class="method-stats">14 methods, 6 failed,   8 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -105,6 +105,21 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="TestCases.TC_002_PopularSurgeries" class="method navigator-link" hash-for-method="TC_010_displayAllSurgeries">TC_010_displayAllSurgeries</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestCases.TC_003_HealthandWellness" class="method navigator-link" hash-for-method="TC_011_verifywithInavlidPhoneNumber">TC_011_verifywithInavlidPhoneNumber</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestCases.TC_003_HealthandWellness" class="method navigator-link" hash-for-method="TC_012_verifywithInvalidEmailId">TC_012_verifywithInvalidEmailId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestCases.TC_003_HealthandWellness" class="method navigator-link" hash-for-method="TC_013_verifywithValidInfo">TC_013_verifywithValidInfo</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -166,21 +181,6 @@
                         <a href="#" panel-name="suite-Suite" title="TestCases.TC_001_FindDoctors" class="method navigator-link" hash-for-method="TC_008_selectRelevance">TC_008_selectRelevance</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCases.TC_003_HealthandWellness" class="method navigator-link" hash-for-method="TC_011_verifywithInavlidPhoneNumber">TC_011_verifywithInavlidPhoneNumber</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCases.TC_003_HealthandWellness" class="method navigator-link" hash-for-method="TC_012_verifywithInvalidEmailId">TC_012_verifywithInvalidEmailId</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCases.TC_003_HealthandWellness" class="method navigator-link" hash-for-method="TC_013_verifywithValidInfo">TC_013_verifywithValidInfo</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
@@ -204,13 +204,33 @@
                   <a name="TC_010_displayAllSurgeries">
                   </a> <!-- TC_010_displayAllSurgeries -->
                   <span class="method-name">TC_010_displayAllSurgeries</span>
-                  <div class="stack-trace">java.lang.IllegalArgumentException: The workbook already contains a sheet named &apos;List of Surgeries&apos;
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.validateSheetName(XSSFWorkbook.java:959)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.createSheet(XSSFWorkbook.java:903)
-	at Utilities.ExcelUtils.saveToExcelSurgeriesList(ExcelUtils.java:51)
-	at TestCases.TC_002_PopularSurgeries.TC_010_displayAllSurgeries(TC_002_PopularSurgeries.java:31)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-... Removed 31 stack frames
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//div[text()=&apos;Surgeries&apos;])[1]&quot;}
+  (Session info: chrome=120.0.6099.130)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a9c6256c9881e887fd50a2a4001754c0, findElement {using=xpath, value=(//div[text()=&apos;Surgeries&apos;])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49990}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49990/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a9c6256c9881e887fd50a2a4001754c0
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
+	at PageObject.PopularSurgeriesPage.clickSurgery(PopularSurgeriesPage.java:27)
+	at TestCases.TC_002_PopularSurgeries.TC_010_displayAllSurgeries(TC_002_PopularSurgeries.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -227,43 +247,15 @@
                   <a name="TC_09_extractDoctorDetails">
                   </a> <!-- TC_09_extractDoctorDetails -->
                   <span class="method-name">TC_09_extractDoctorDetails</span>
-                  <div class="stack-trace">java.lang.IndexOutOfBoundsException: Index 2 out of bounds for length 2
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
-	at java.base/java.util.Objects.checkIndex(Objects.java:373)
-	at java.base/java.util.ArrayList.get(ArrayList.java:425)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
-	at com.sun.proxy.$Proxy28.get(Unknown Source)
-	at PageObject.FindDoctorsPage.extractDoctorsDetails(FindDoctorsPage.java:165)
-	at TestCases.TC_001_FindDoctors.TC_09_extractDoctorDetails(TC_001_FindDoctors.java:103)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-... Removed 35 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">TestCases.TC_003_HealthandWellness</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_014_verifyThankYouTxt">
-                  </a> <!-- TC_014_verifyThankYouTxt -->
-                  <span class="method-name">TC_014_verifyThankYouTxt</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//div[text()=&apos;THANK YOU&apos;])[1]&quot;}
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;c-profile--qualification&apos;]&quot;}
   (Session info: chrome=120.0.6099.130)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d626008db40d631260ebd75f942125a1, findElement {using=xpath, value=(//div[text()=&apos;THANK YOU&apos;])[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\2303748\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65128}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65128/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d626008db40d631260ebd75f942125a1
+Command: [a9c6256c9881e887fd50a2a4001754c0, findElement {using=xpath, value=//div[@class=&apos;c-profile--qualification&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49990}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49990/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a9c6256c9881e887fd50a2a4001754c0
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -277,10 +269,158 @@ Session ID: d626008db40d631260ebd75f942125a1
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy27.getText(Unknown Source)
-	at PageObject.HealthandWellnessPage.getDisplayedMsg(HealthandWellnessPage.java:114)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.getText(Unknown Source)
+	at PageObject.FindDoctorsPage.extractDoctorsDetails(FindDoctorsPage.java:177)
+	at TestCases.TC_001_FindDoctors.TC_09_extractDoctorDetails(TC_001_FindDoctors.java:103)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">TestCases.TC_003_HealthandWellness</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_011_verifywithInavlidPhoneNumber">
+                  </a> <!-- TC_011_verifywithInavlidPhoneNumber -->
+                  <span class="method-name">TC_011_verifywithInavlidPhoneNumber</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@class=&apos;nav-interact&apos;]&quot;}
+  (Session info: chrome=120.0.6099.130)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a9c6256c9881e887fd50a2a4001754c0, findElement {using=xpath, value=//span[@class=&apos;nav-interact&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49990}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49990/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a9c6256c9881e887fd50a2a4001754c0
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
+	at PageObject.HealthandWellnessPage.clickOnCorporate(HealthandWellnessPage.java:59)
+	at TestCases.TC_003_HealthandWellness.TC_011_verifywithInavlidPhoneNumber(TC_003_HealthandWellness.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_012_verifywithInvalidEmailId">
+                  </a> <!-- TC_012_verifywithInvalidEmailId -->
+                  <span class="method-name">TC_012_verifywithInvalidEmailId</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#contactNumber&quot;}
+  (Session info: chrome=120.0.6099.130)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a9c6256c9881e887fd50a2a4001754c0, findElement {using=id, value=contactNumber}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49990}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49990/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a9c6256c9881e887fd50a2a4001754c0
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.clear(Unknown Source)
+	at PageObject.HealthandWellnessPage.fillformWithInvalidEmail(HealthandWellnessPage.java:82)
+	at TestCases.TC_003_HealthandWellness.TC_012_verifywithInvalidEmailId(TC_003_HealthandWellness.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_013_verifywithValidInfo">
+                  </a> <!-- TC_013_verifywithValidInfo -->
+                  <span class="method-name">TC_013_verifywithValidInfo</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#contactNumber&quot;}
+  (Session info: chrome=120.0.6099.130)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a9c6256c9881e887fd50a2a4001754c0, findElement {using=id, value=contactNumber}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49990}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49990/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a9c6256c9881e887fd50a2a4001754c0
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.clear(Unknown Source)
+	at PageObject.HealthandWellnessPage.fillformWithValidData(HealthandWellnessPage.java:96)
+	at TestCases.TC_003_HealthandWellness.TC_013_verifywithValidInfo(TC_003_HealthandWellness.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_014_verifyThankYouTxt">
+                  </a> <!-- TC_014_verifyThankYouTxt -->
+                  <span class="method-name">TC_014_verifyThankYouTxt</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//button[@type=&apos;submit&apos;])[1]&quot;}
+  (Session info: chrome=120.0.6099.130)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a9c6256c9881e887fd50a2a4001754c0, findElement {using=xpath, value=(//button[@type=&apos;submit&apos;])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49990}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49990/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a9c6256c9881e887fd50a2a4001754c0
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
+	at PageObject.HealthandWellnessPage.getDisplayedMsg(HealthandWellnessPage.java:104)
 	at TestCases.TC_003_HealthandWellness.TC_014_verifyThankYouTxt(TC_003_HealthandWellness.java:50)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 36 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -347,35 +487,6 @@ Session ID: d626008db40d631260ebd75f942125a1
                   <a name="TC_008_selectRelevance">
                   </a> <!-- TC_008_selectRelevance -->
                   <span class="method-name">TC_008_selectRelevance</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">TestCases.TC_003_HealthandWellness</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_011_verifywithInavlidPhoneNumber">
-                  </a> <!-- TC_011_verifywithInavlidPhoneNumber -->
-                  <span class="method-name">TC_011_verifywithInavlidPhoneNumber</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_012_verifywithInvalidEmailId">
-                  </a> <!-- TC_012_verifywithInvalidEmailId -->
-                  <span class="method-name">TC_012_verifywithInvalidEmailId</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_013_verifywithValidInfo">
-                  </a> <!-- TC_013_verifywithValidInfo -->
-                  <span class="method-name">TC_013_verifywithValidInfo</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -575,66 +686,66 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(14);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC_014_verifyThankYouTxt')
-data.setCell(0, 2, 'TestCases.TC_003_HealthandWellness')
-data.setCell(0, 3, 31251);
+data.setCell(0, 1, 'TC_09_extractDoctorDetails')
+data.setCell(0, 2, 'TestCases.TC_001_FindDoctors')
+data.setCell(0, 3, 30218);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TC_011_verifywithInavlidPhoneNumber')
+data.setCell(1, 1, 'TC_012_verifywithInvalidEmailId')
 data.setCell(1, 2, 'TestCases.TC_003_HealthandWellness')
-data.setCell(1, 3, 7727);
+data.setCell(1, 3, 15102);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'TC_004_searchSpecialityDentist')
-data.setCell(2, 2, 'TestCases.TC_001_FindDoctors')
-data.setCell(2, 3, 6912);
+data.setCell(2, 1, 'TC_011_verifywithInavlidPhoneNumber')
+data.setCell(2, 2, 'TestCases.TC_003_HealthandWellness')
+data.setCell(2, 3, 15084);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'TC_09_extractDoctorDetails')
-data.setCell(3, 2, 'TestCases.TC_001_FindDoctors')
-data.setCell(3, 3, 6578);
+data.setCell(3, 1, 'TC_014_verifyThankYouTxt')
+data.setCell(3, 2, 'TestCases.TC_003_HealthandWellness')
+data.setCell(3, 3, 15072);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'TC_010_displayAllSurgeries')
 data.setCell(4, 2, 'TestCases.TC_002_PopularSurgeries')
-data.setCell(4, 3, 4939);
+data.setCell(4, 3, 15053);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'TC_002_verifyFindDoctorbtn')
-data.setCell(5, 2, 'TestCases.TC_001_FindDoctors')
-data.setCell(5, 3, 4614);
+data.setCell(5, 1, 'TC_013_verifywithValidInfo')
+data.setCell(5, 2, 'TestCases.TC_003_HealthandWellness')
+data.setCell(5, 3, 15042);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'TC_007_selectFeesandAvailability')
+data.setCell(6, 1, 'TC_004_searchSpecialityDentist')
 data.setCell(6, 2, 'TestCases.TC_001_FindDoctors')
-data.setCell(6, 3, 4393);
+data.setCell(6, 3, 6347);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'TC_008_selectRelevance')
+data.setCell(7, 1, 'TC_002_verifyFindDoctorbtn')
 data.setCell(7, 2, 'TestCases.TC_001_FindDoctors')
-data.setCell(7, 3, 2800);
+data.setCell(7, 3, 5362);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'TC_006_selectExperience')
+data.setCell(8, 1, 'TC_007_selectFeesandAvailability')
 data.setCell(8, 2, 'TestCases.TC_001_FindDoctors')
-data.setCell(8, 3, 1496);
+data.setCell(8, 3, 5129);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'TC_005_selectPatientStory')
+data.setCell(9, 1, 'TC_008_selectRelevance')
 data.setCell(9, 2, 'TestCases.TC_001_FindDoctors')
-data.setCell(9, 3, 1336);
+data.setCell(9, 3, 3282);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'TC_003_searchCity')
+data.setCell(10, 1, 'TC_006_selectExperience')
 data.setCell(10, 2, 'TestCases.TC_001_FindDoctors')
-data.setCell(10, 3, 577);
+data.setCell(10, 3, 1429);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'TC_013_verifywithValidInfo')
-data.setCell(11, 2, 'TestCases.TC_003_HealthandWellness')
-data.setCell(11, 3, 499);
+data.setCell(11, 1, 'TC_005_selectPatientStory')
+data.setCell(11, 2, 'TestCases.TC_001_FindDoctors')
+data.setCell(11, 3, 1389);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'TC_012_verifywithInvalidEmailId')
-data.setCell(12, 2, 'TestCases.TC_003_HealthandWellness')
-data.setCell(12, 3, 476);
+data.setCell(12, 1, 'TC_003_searchCity')
+data.setCell(12, 2, 'TestCases.TC_001_FindDoctors')
+data.setCell(12, 3, 469);
 data.setCell(13, 0, 13)
 data.setCell(13, 1, 'TC_001_verifyPractoPage')
 data.setCell(13, 2, 'TestCases.TC_001_FindDoctors')
-data.setCell(13, 3, 79);
+data.setCell(13, 3, 90);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -685,41 +796,41 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">TC_001_verifyPractoPage</span>
-                <span class="method-start">19145 ms</span>
+                <span class="method-start">12928 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_002_verifyFindDoctorbtn</span>
-                <span class="method-start">19688 ms</span>
+                <span class="method-start">13458 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_003_searchCity</span>
-                <span class="method-start">24673 ms</span>
+                <span class="method-start">19136 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_004_searchSpecialityDentist</span>
-                <span class="method-start">25624 ms</span>
+                <span class="method-start">19915 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_005_selectPatientStory</span>
-                <span class="method-start">32832 ms</span>
+                <span class="method-start">26570 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_006_selectExperience</span>
-                <span class="method-start">36766 ms</span>
+                <span class="method-start">30346 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_007_selectFeesandAvailability</span>
-                <span class="method-start">40549 ms</span>
+                <span class="method-start">33937 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_008_selectRelevance</span>
-                <span class="method-start">47121 ms</span>
+                <span class="method-start">41542 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">TC_09_extractDoctorDetails</span>
-                <span class="method-start">50224 ms</span>
+                <span class="method-start">45099 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -728,35 +839,41 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">TC_010_displayAllSurgeries</span>
-                <span class="method-start">57093 ms</span>
+                <span class="method-start">75526 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">TestCases.TC_003_HealthandWellness</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">TC_011_verifywithInavlidPhoneNumber</span>
-                <span class="method-start">62500 ms</span>
+                <span class="method-start">90767 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">TC_012_verifywithInvalidEmailId</span>
-                <span class="method-start">70607 ms</span>
+                <span class="method-start">106031 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">TC_013_verifywithValidInfo</span>
-                <span class="method-start">71474 ms</span>
+                <span class="method-start">121326 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">TC_014_verifyThankYouTxt</span>
-                <span class="method-start">72343 ms</span>
+                <span class="method-start">136552 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">TestCases.TC_001_FindDoctors</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">103978 ms</span>
+                <span class="method-start">151813 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

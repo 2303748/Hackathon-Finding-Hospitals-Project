@@ -1,2 +1,0 @@
-file:FeatureFiles/C_popularSurgeries.feature:4
-file:FeatureFiles/B_findDoctors.feature:11

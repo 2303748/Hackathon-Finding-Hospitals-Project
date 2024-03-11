@@ -14,7 +14,7 @@ public class PopularSurgeriesPage extends BasePage{
 		super(driver);
 	}
 	
-	@FindBy(xpath="(//div[text()='Surgeries'])[1]")
+	@FindBy(xpath="//div[text()='Surgeries']")
 	WebElement btnSurgery;
 	
 	@FindBy(xpath="//p[@class='mt-12px AilmentItem-module_itemText__XvCHL']")

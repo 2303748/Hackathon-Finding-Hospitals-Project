@@ -20,6 +20,16 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- TestCases.TC_002_PopularSurgeries -->
+      <class name="TestCases.TC_003_HealthandWellness">
+        <methods>
+          <include name="TC_013_verifywithValidInfo"/>
+          <include name="setupDriver"/>
+          <include name="TC_014_verifyThankYouTxt"/>
+          <include name="TC_011_verifywithInavlidPhoneNumber"/>
+          <include name="TC_012_verifywithInvalidEmailId"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- TestCases.TC_003_HealthandWellness -->
       <class name="TestCases.TC_001_FindDoctors">
         <methods>
           <include name="TC_09_extractDoctorDetails"/>
@@ -27,13 +37,6 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- TestCases.TC_001_FindDoctors -->
-      <class name="TestCases.TC_003_HealthandWellness">
-        <methods>
-          <include name="setupDriver"/>
-          <include name="TC_014_verifyThankYouTxt"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- TestCases.TC_003_HealthandWellness -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
